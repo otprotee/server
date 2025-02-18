@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="otprotee's website">
+	<meta name="keywords" content="otprotee, just so consortium">
+	<meta name="author" content="otprotee">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>otprotee</title>
+	<link rel="icon" type="image/x-icon" href="..\doc\icon1.png">
+	<link rel="stylesheet" href="..\scr\css\index.css">
+	<script src="..\scr\javascript\index.js"></script>
+</head>
+<body>
+<div class="top">
+	<h1>This is a basic test website</h1>
+</div>
+</body>
+<footer>
+<div class="footer_info">
+	<p id="hi"><button onclick="FData()">View Data</button></p>
+	<p id="au">Author:</p>
+	<p id="con">Contributers:</p>
+
+</div>
+
+<script>
+
+function FData() {
+	document.getElementById("au").innerHTML = 'Author: Otprotee';
+	document.getElementById("con").innerHTML = 'Contributers: Me, Myself and I';
+	document.getElementById("hi").innerHTML = '<button onclick="hide()">Hide Data</button>';
+	console.log('1');
+	
+}
+function hide() { 
+	document.getElementById("au").innerHTML = 'Author: ';
+	document.getElementById("hi").innerHTML = '<button onclick="FData()">View Data</button>';
+	document.getElementById("con").innerHTML = 'Contributers:';
+	console.log('2');
+}
+
+</script>
+</footer>
+</html>
