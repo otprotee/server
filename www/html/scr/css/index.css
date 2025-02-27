@@ -33,8 +33,6 @@ p {
 .white {
 	color: white;
 	background-color: grey;
-	margin: 0px;
-	padding: 0px;
 }
 
 a:link, a:visited {
