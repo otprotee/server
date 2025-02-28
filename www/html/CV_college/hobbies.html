@@ -14,7 +14,6 @@
 	<script src="..\scr\javascript\index.js"></script>
 	
 </head>
-
 <body>
 		<div class="container">
 			<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -26,14 +25,37 @@
 					<li class="nav-item"><a href="#" class="nav-link active">Hobbies</a></li>
 			</ul>
 			</header>
-	  </div>	
-	<div id="pics"><p style="background-image: url('../doc/background/ffdp.jpg'); background-size: 100% 100%; background-repeat: no-repeat; padding: 100%; background-attachment: fixed;"></div>
-	
-</script> 	
+		</div>
+<div class="background-image"></div>	
 
-</body>
+<script>	  
+let images = [
+	'../doc/background/ffdp.jpg',
+	'../doc/background/korn.jpg',
+	'../doc/background/limpbizkit.jpg',
+	'../doc/background/linkin_park.jpg',
+	'../doc/background/prodigy.jpg',
+	'../doc/background/system.jpg'
+];
+
+let index = 0;
+function changeBackground() {
+	document.querySelector('.background-image').style.backgroundImage = `url('${images[index]}')`;
+	index = (index + 1) % images.length;
+}
+setInterval(changeBackground, 5000);
+changeBackground();
+</script>
+<h3 style="color: green">My hobbies:</h3>
+<p style="color: green">I enjoy listening to music some of this bands include, korn, limp bizkit, system of a down, linkin park, the prodigy and five finger death punch.<p style="color: green">
+I also enjoy reparing and tinkering with computers and engines. <p>
+<p style="color: green">I have also made a website that is hosted in my room. I have set up the DNS and port forwarding. As well as setting up 
+an Ubuntu server that runs apache2 obtaining a web domian. I also made the website HTTPS including an SSL certificate. I also edited the YAML 
+configurations
+<p></p>
 <div class="white">
-	<div class="container">
+	<div class="footer-container">
+		<div class="bottom">
 			<footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
 				<div class="col mb-3">
 					<p class="text-body-bg">© 2025</p>
@@ -50,12 +72,16 @@
 						<li><p id="con">Contributers:</p></br></li>
 					</ul>
 				</div>
-		 </footer>
+			</footer>
+		</div>
 	</div>
 </div>
 <script>
 FData()
 hide()
 </script>
+</body>
+
+
 
 </html>
